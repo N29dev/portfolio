@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurlybek — Portfolio | N29</title>
+  <meta name="description" content="Personal portfolio of Nurlybek (N29) — developer from Aktau. Projects in web, mobile and Java." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070914;
+      --bg-soft: #0d1224;
+      --card: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f7f8ff;
+      --muted: #a0aec0;
+      --accent: #7dd3fc;
+      --accent-2: #38bdf8;
+      --green: #4ade80;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.15), transparent),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(7, 9, 20, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #04101f;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform 0.15s, filter 0.15s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 140px 0 100px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--green);
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.15s, filter 0.15s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #04101f;
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.35);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-links a:hover {
+      color: #bae6fd;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .skill:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      padding: 12px 22px;
+      border-radius: 14px;
+      font-weight: 600;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .social:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 0 60px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 120px 0 70px;
+      }
+
+      .contact-box {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">N29<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="https://github.com/N29dev" target="_blank" rel="noopener" class="nav-cta">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="badge">Available for opportunities</div>
+      <h1>Nurlybek</h1>
+      <p>18 y.o. developer from Aktau, Kazakhstan. Building web tools, mobile apps and systems — currently focused on Flutter and web experiences.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="https://github.com/N29dev" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About me</h2>
+      <p class="section-sub">A bit about who I am and what I like to build.</p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <p>Hey, I'm <strong>Nurlybek</strong> (N29). I started with Java projects at university and quickly moved into building real tools people actually use.</p>
+          <p>Right now I'm working on <strong>Anyqta</strong> — a mobile app — and I also make small but polished web tools for the Roblox / Blue Lock Rivals community (reaction trainers, feedback systems, etc.).</p>
+          <p>I like clean UI, fast feedback loops, and shipping things that work. Based in Aktau, Mangystau.</p>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <strong>5+</strong>
+            <span>Public projects</span>
+          </div>
+          <div class="stat">
+            <strong>Java</strong>
+            <span>University base</span>
+          </div>
+          <div class="stat">
+            <strong>Flutter</strong>
+            <span>Current focus</span>
+          </div>
+          <div class="stat">
+            <strong>Web</strong>
+            <span>Tools & trainers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Selected work — from live tools to university systems.</p>
+
+      <div class="projects-grid">
+        <!-- GK Trainer -->
+        <article class="project-card">
+          <span class="project-tag">Live Tool</span>
+          <h3>GK Reaction Trainer</h3>
+          <p>Interactive reaction trainer for Blue Lock Rivals goalkeepers. Realistic shot reading, keybinds, controller support, difficulty modes and stats tracking. Currently live on n29.kz.</p>
+          <div class="project-links">
+            <a href="https://n29.kz" target="_blank" rel="noopener">Live site →</a>
+            <a href="https://github.com/N29dev/gk-reaction-trainer" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- Player Feedback -->
+        <article class="project-card">
+          <span class="project-tag">Web App</span>
+          <h3>EgoIndex — Player Feedback</h3>
+          <p>Roblox player feedback & ranking system. Loads real Roblox avatars, calculates average stats, auto-assigns ranks (S/A/B/C), and stores reviews. Deployed on Vercel.</p>
+          <div class="project-links">
+            <a href="https://player-feedback-site.vercel.app" target="_blank" rel="noopener">Live site →</a>
+            <a href="https://github.com/N29dev/player-feedback-site" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- Anyqta -->
+        <article class="project-card">
+          <span class="project-tag">Mobile</span>
+          <h3>Anyqta App</h3>
+          <p>Flutter / Dart mobile application. Private repository — part of software development work related to Anyqta (Aktau-based).</p>
+          <div class="project-links">
+            <a href="https://github.com/N29dev/anyqta_app" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+
+        <!-- Hotel -->
+        <article class="project-card">
+          <span class="project-tag">Java · OOP</span>
+          <h3>Hotel Management System</h3>
+          <p>Semester OOP project in Java. Classic hotel management features built with proper object-oriented design principles.</p>
+          <div class="project-links">
+            <a href="https://github.com/N29dev/HotelManagement-OOP-Project" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+
+        <!-- Cafe -->
+        <article class="project-card">
+          <span class="project-tag">Java</span>
+          <h3>Lichao Cafe Order Management</h3>
+          <p>Order management system for a cafe. Java-based tool focused on practical order flow and management.</p>
+          <div class="project-links">
+            <a href="https://github.com/N29dev/linens-numbers-lichao-tree" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & tools</h2>
+      <p class="section-sub">Technologies I use regularly or have solid experience with.</p>
+      <div class="skills-grid">
+        <span class="skill">Java</span>
+        <span class="skill">HTML / CSS / JS</span>
+        <span class="skill">Dart</span>
+        <span class="skill">Flutter</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Vercel</span>
+        <span class="skill">Supabase</span>
+        <span class="skill">REST APIs</span>
+        <span class="skill">OOP</span>
+        <span class="skill">Responsive UI</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Let's connect</h2>
+        <p>Open to collaboration, freelance, or just talking about projects.<br>Feel free to reach out.</p>
+        <div class="socials">
+          <a href="https://github.com/N29dev" target="_blank" rel="noopener" class="social">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://x.com/N29_full" target="_blank" rel="noopener" class="social">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @N29_full
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Nurlybek · Built with plain HTML & CSS · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>
