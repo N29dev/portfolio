@@ -17,7 +17,6 @@
       --text: #f7f8ff;
       --muted: #a0aec0;
       --accent: #7dd3fc;
-      --accent-2: #38bdf8;
       --green: #4ade80;
       --purple: #c084fc;
     }
@@ -43,13 +42,12 @@
       margin: 0 auto;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 50;
       backdrop-filter: blur(16px);
-      background: rgba(7, 9, 20, 0.75);
+      background: rgba(7, 9, 20, 0.8);
       border-bottom: 1px solid var(--border);
     }
 
@@ -78,7 +76,6 @@
 
     .nav-links a:hover { color: var(--text); }
 
-    /* HERO */
     .hero {
       padding: 150px 0 90px;
       text-align: center;
@@ -161,7 +158,6 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* SECTIONS */
     section { padding: 70px 0; }
 
     .section-title {
@@ -174,61 +170,59 @@
     .section-sub {
       color: var(--muted);
       margin-bottom: 36px;
-      max-width: 480px;
     }
 
-    /* ABOUT */
     .about-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 24px;
       padding: 36px;
-      backdrop-filter: blur(12px);
     }
 
     .about-card p {
       color: var(--muted);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-size: 1.05rem;
     }
 
     .about-card p:last-child { margin-bottom: 0; }
-
     .about-card strong { color: var(--text); }
 
-    /* GUNS CARD */
+    /* Fixed guns card */
     .guns-card {
-      background: linear-gradient(145deg, rgba(192, 132, 252, 0.12), rgba(56, 189, 248, 0.08));
-      border: 1px solid rgba(192, 132, 252, 0.25);
+      display: block;
+      background: linear-gradient(145deg, rgba(192, 132, 252, 0.13), rgba(56, 189, 248, 0.07));
+      border: 1px solid rgba(192, 132, 252, 0.28);
       border-radius: 24px;
-      padding: 40px 36px;
+      padding: 40px 32px;
       text-align: center;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
     }
 
     .guns-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(192, 132, 252, 0.45);
+      transform: translateY(-4px);
+      border-color: rgba(192, 132, 252, 0.5);
+      background: linear-gradient(145deg, rgba(192, 132, 252, 0.18), rgba(56, 189, 248, 0.1));
     }
 
     .guns-card .tag {
       display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.72rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--purple);
-      background: rgba(192, 132, 252, 0.15);
-      padding: 5px 12px;
-      border-radius: 8px;
-      margin-bottom: 18px;
+      letter-spacing: 0.1em;
+      color: #e9d5ff;
+      background: rgba(168, 85, 247, 0.25);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
     }
 
     .guns-card h3 {
-      font-size: 1.6rem;
-      font-weight: 700;
+      font-size: 1.8rem;
+      font-weight: 800;
       margin-bottom: 10px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
     }
 
     .guns-card p {
@@ -240,44 +234,37 @@
     .guns-card .btn-guns {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       background: linear-gradient(135deg, #c084fc, #a855f7);
       color: #1a0b2e;
-      padding: 14px 28px;
+      padding: 13px 26px;
       border-radius: 14px;
       font-weight: 700;
-      font-size: 1rem;
-      box-shadow: 0 12px 28px rgba(168, 85, 247, 0.3);
-      transition: transform 0.15s, filter 0.15s;
+      font-size: 0.98rem;
+      box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
     }
 
-    .guns-card .btn-guns:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.08);
-    }
-
-    /* CONTACT */
     .contact-box {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 24px;
-      padding: 48px;
+      padding: 44px 32px;
       text-align: center;
     }
 
     .contact-box h2 {
       font-size: 1.7rem;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .contact-box p {
+    .contact-box > p {
       color: var(--muted);
       margin-bottom: 28px;
     }
 
     .socials {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -285,18 +272,20 @@
     .social {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--border);
-      padding: 12px 22px;
-      border-radius: 14px;
+      padding: 11px 18px;
+      border-radius: 12px;
       font-weight: 600;
-      transition: background 0.15s, border-color 0.15s;
+      font-size: 0.92rem;
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
     }
 
     .social:hover {
       background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(56, 189, 248, 0.3);
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: translateY(-2px);
     }
 
     footer {
@@ -310,7 +299,7 @@
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .hero { padding: 130px 0 70px; }
-      .contact-box, .guns-card, .about-card { padding: 28px 22px; }
+      .contact-box, .guns-card, .about-card { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -357,7 +346,7 @@
       <p class="section-sub">My main page.</p>
 
       <a href="https://guns.lol/n29" target="_blank" rel="noopener" class="guns-card">
-        <div class="tag">guns.lol</div>
+        <div class="tag">GUNS.LOL</div>
         <h3>@n29</h3>
         <p>competitive programmer and also play games</p>
         <span class="btn-guns">Open profile →</span>
@@ -371,17 +360,14 @@
         <h2>Connect</h2>
         <p>Find me here.</p>
         <div class="socials">
-          <a href="https://guns.lol/n29" target="_blank" rel="noopener" class="social">
-            guns.lol/n29
-          </a>
-          <a href="https://x.com/N29_full" target="_blank" rel="noopener" class="social">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            @N29_full
-          </a>
-          <a href="https://github.com/N29dev" target="_blank" rel="noopener" class="social">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
+          <a href="https://guns.lol/n29" target="_blank" rel="noopener" class="social">guns.lol</a>
+          <a href="https://discord.com/users/notn29" target="_blank" rel="noopener" class="social">Discord · notn29</a>
+          <a href="https://www.youtube.com/@noproblem29" target="_blank" rel="noopener" class="social">YouTube</a>
+          <a href="https://www.roblox.com/users/2440032582/profile" target="_blank" rel="noopener" class="social">Roblox</a>
+          <a href="https://steamcommunity.com/id/n29_" target="_blank" rel="noopener" class="social">Steam</a>
+          <a href="https://codeforces.com/profile/N29" target="_blank" rel="noopener" class="social">Codeforces</a>
+          <a href="https://x.com/N29_full" target="_blank" rel="noopener" class="social">X · @N29_full</a>
+          <a href="https://github.com/N29dev" target="_blank" rel="noopener" class="social">GitHub</a>
         </div>
       </div>
     </div>
