@@ -7,26 +7,7 @@
   const year=$('#year');
   if(year) year.textContent=String(new Date().getFullYear());
 
-  const cards=$$('.project[data-category]');
-  const filters=$$('.filter[data-filter]');
-  const result=$('#result-count');
-  function applyFilter(value) {
-    const safe=['all','blr','code'].includes(value)?value:'all';
-    filters.forEach(btn=>{
-      const active=btn.dataset.filter===safe;
-      btn.classList.toggle('active',active);
-      btn.setAttribute('aria-pressed',String(active));
-    });
-    let shown=0;
-    cards.forEach(card=>{
-      const show=safe==='all'||card.dataset.category===safe;
-      card.hidden=!show;
-      if(show) shown++;
-    });
-    if(result)result.textContent=shown+' project'+(shown!==1?'s':'');
-  }
-  filters.forEach(btn=>btn.addEventListener('click',()=>applyFilter(btn.dataset.filter)));
-  applyFilter('all');
+
 
   const progress=$('#progress');
   let ticking=false;
