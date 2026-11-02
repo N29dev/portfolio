@@ -21,6 +21,8 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 - Mobile and desktop layouts, keyboard-visible focus and reduced-motion behavior.
 - Three curated projects: BL:R Server Finder, Glutony, and BL:R Creator Studio. Experimental and test repositories are intentionally excluded.
 - Direct links to GitHub, Codeforces, BL:R tools, Roblox, Discord and other public profiles.
+- Glutony project card has a dedicated Discord user-install OAuth link and a separate GitHub source link.
+- N29's TikTok account is linked in the contact section as [@0nlyhunger](https://www.tiktok.com/@0nlyhunger).
 - No framework, analytics tracker, artificial counters or build step.
 - Project cards and external links work without JavaScript.
 
