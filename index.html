@@ -18,8 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/site.css?v=1">
-  <script defer src="/site.js?v=1"></script>
+  <link rel="stylesheet" href="/site.css?v=2">
+  <link rel="stylesheet" href="/polish.css?v=1">
+  <script defer src="/site.js?v=2"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +35,10 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="nav-cta" href="https://github.com/N29dev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <div class="nav-actions">
+        <button class="command-trigger" type="button" data-command-open aria-label="Search pages and links" aria-keyshortcuts="Meta+K Control+K"><span class="command-trigger-icon" aria-hidden="true">⌕</span><span class="command-trigger-label">Quick jump</span><kbd>⌘ K</kbd></button>
+        <a class="nav-cta" href="https://github.com/N29dev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </nav>
 
@@ -49,6 +53,7 @@
           <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
           <a class="button button-outline" href="https://codeforces.com/profile/N29" target="_blank" rel="noopener noreferrer">Codeforces profile <span aria-hidden="true">↗</span></a>
         </div>
+        <div class="hero-signal"><span class="hero-signal-icon" aria-hidden="true">⌁</span><span><strong>Built for curiosity.</strong><small>Programming, competitive problem-solving &amp; games.</small></span></div>
         <div class="hero-tags" aria-label="Interests">
           <span>C++</span><span>Problem solving</span><span>Web tools</span><span>Game systems</span>
         </div>
@@ -64,9 +69,10 @@
           <span class="art-vertical">IDENTITY // N29</span>
           <div class="art-index"><span>01 / ALTER EGO</span><strong>HUNGER</strong></div>
         </div>
-        <div class="art-bottom"><span class="art-caption"><span class="online-pip"></span> PERSONAL AVATAR / HUNGER</span><span class="art-coordinate">43° N · 76° E</span></div>
+        <div class="art-note" aria-hidden="true"><span>MADE OF</span><strong>LOGIC<span> / </span>INSTINCT</strong></div>
+        <div class="art-bottom"><span class="art-caption"><span class="online-pip"></span> PERSONAL AVATAR / HUNGER</span><button type="button" class="art-view" data-portrait-open aria-label="View full-resolution Hunger artwork">View full artwork ↗</button></div>
       </div>
-      <a class="hero-scroll" href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      <a class="hero-scroll" href="#launchpad">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
     </section>
 
     <div class="marquee" aria-label="Topics I work with">
@@ -75,13 +81,26 @@
       </div>
     </div>
 
+    <section class="launchpad wrap" id="launchpad" aria-labelledby="launchpad-title">
+      <div class="launchpad-heading">
+        <div><span class="launchpad-kicker">SHORTCUTS / BL:R ECOSYSTEM</span><h2 id="launchpad-title">Where are we <em>going?</em></h2></div>
+        <p>Skip the searching. Get straight to a match or put Glutony in your Discord.</p>
+      </div>
+      <div class="launchpad-grid">
+        <a class="launchpad-link" href="https://blr.n29.kz/servers/?mode=8v8" target="_blank" rel="noopener noreferrer"><span class="launchpad-icon" aria-hidden="true">⚽</span><span class="launchpad-copy"><strong>8v8 lobbies</strong><small>Find a public match</small></span><span class="launchpad-arrow" aria-hidden="true">↗</span></a>
+        <a class="launchpad-link" href="https://blr.n29.kz/servers/?mode=pro" target="_blank" rel="noopener noreferrer"><span class="launchpad-icon" aria-hidden="true">🏆</span><span class="launchpad-copy"><strong>Pro servers</strong><small>Browse competitive lobbies</small></span><span class="launchpad-arrow" aria-hidden="true">↗</span></a>
+        <a class="launchpad-link" href="https://blr.n29.kz/servers/customs/" target="_blank" rel="noopener noreferrer"><span class="launchpad-icon" aria-hidden="true">🤝</span><span class="launchpad-copy"><strong>Custom matches</strong><small>Community-hosted games</small></span><span class="launchpad-arrow" aria-hidden="true">↗</span></a>
+        <a class="launchpad-link launchpad-featured" href="https://discord.com/oauth2/authorize?client_id=1563907646757666926&amp;integration_type=1&amp;scope=applications.commands" target="_blank" rel="noopener noreferrer"><span class="launchpad-icon" aria-hidden="true">✦</span><span class="launchpad-copy"><strong>Get Glutony</strong><small>Add the Discord app</small></span><span class="launchpad-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
     <section class="section wrap" id="work">
       <div class="section-header">
         <div>
           <div class="eyebrow"><span>01</span> / SELECTED BUILDS</div>
           <h2>Things I've <em>built.</em></h2>
         </div>
-        <p>Selected projects I actively build and use — not throwaway tests or one-off experiments.</p>
+        <p>Three projects worth sharing. Each one solves a problem I ran into myself.</p>
       </div>
       <div class="project-grid" id="project-grid">
         <a class="project project-featured" data-category="blr" href="https://blr.n29.kz/servers/" target="_blank" rel="noopener noreferrer">
@@ -116,6 +135,7 @@
           <div class="project-body"><span class="project-type">VIDEO / BROWSER TOOLS</span><h3>BL:R Creator Studio</h3><p>Browser-based utilities for video compression, TikTok inspection, clipping and MP4 processing.</p><div class="project-pills"><span>WebAssembly</span><span>FFmpeg</span></div></div>
         </a>
       </div>
+      <div class="work-note"><span class="work-note-led" aria-hidden="true"></span><p>Less noise, more things that actually work.</p><a href="https://github.com/N29dev" target="_blank" rel="noopener noreferrer">Browse my GitHub ↗</a></div>
     </section>
 
     <section class="section about-section" id="about">
@@ -137,6 +157,10 @@
             <a class="inline-link" href="https://codeforces.com/profile/N29" target="_blank" rel="noopener noreferrer">My Codeforces profile <span aria-hidden="true">↗</span></a>
           </div>
         </div>
+        <div class="approach">
+          <div class="approach-intro"><span>THE WAY I WORK</span><strong>Observe. Understand. Build. Improve.</strong></div>
+          <div class="approach-steps"><span><b>01</b> Question assumptions</span><span><b>02</b> Find the pattern</span><span><b>03</b> Build the solution</span><span><b>04</b> Iterate</span></div>
+        </div>
       </div>
     </section>
 
@@ -146,7 +170,7 @@
         <div class="contact-copy">
           <p class="contact-kicker">THE INTERNET IS A SMALL PLACE.</p>
           <h2>Let's <em>connect.</em></h2>
-          <p>Want to talk algorithms, projects, Roblox or games? These are the places to find me.</p>
+          <p>Algorithms, projects, Roblox, or just a good game — pick a platform and say hi.</p>
           <div class="contact-actions">
             <a class="button button-primary" href="https://github.com/N29dev" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
             <a class="button button-outline" href="https://discord.com/users/1479778096834941099" target="_blank" rel="noopener noreferrer">Discord profile ↗</a>
@@ -169,8 +193,20 @@
     <div class="wrap footer-inner">
       <div class="footer-signature"><span class="brand-mark">N</span><span>N29<span class="point">.kz</span><small>MADE WITH CODE & CURIOSITY</small></span></div>
       <p>© <span id="year">2026</span> N29 · Kazakhstan</p>
+      <button class="footer-search" type="button" data-command-open>Quick jump <kbd>⌘ K</kbd></button>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+  <dialog class="portrait-dialog" id="portrait-lightbox" aria-label="Hunger artwork, full resolution">
+    <button class="portrait-close" type="button" data-portrait-close aria-label="Close full-size artwork">Close ✕</button>
+    <picture><source srcset="/assets/hunger.avif" type="image/avif"><img src="/assets/hunger.webp" width="1365" height="2048" decoding="async" alt="Full-resolution artwork of Hunger with golden eyes, light hair, and a glitch-patterned face"></picture>
+    <p>HUNGER <span>/ N29 — ORIGINAL ARTWORK</span></p>
+  </dialog>
+  <dialog class="command-dialog" id="command-menu" aria-labelledby="command-title">
+    <div class="command-head"><div><span>DIRECTORY / N29.KZ</span><h2 id="command-title">Go somewhere.</h2></div><button type="button" class="command-close" data-command-close aria-label="Close quick navigation">Esc ✕</button></div>
+    <label class="command-input-wrap"><span aria-hidden="true">⌕</span><input id="command-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search projects, links, socials…" aria-label="Search destinations"></label>
+    <div class="command-results" id="command-results" aria-live="polite"></div>
+    <p class="command-help">↑ / ↓ to move · Enter to open · Esc to close</p>
+  </dialog>
 </body>
 </html>
