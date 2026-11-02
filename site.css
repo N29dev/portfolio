@@ -63,6 +63,7 @@ img {display:block;max-width:100%}
 .art-outer {position:relative;width:100%;aspect-ratio:3/4.2;max-height:585px;overflow:hidden;background:#e8e5db;border:1px solid rgba(194,218,255,.19);border-radius:10px 90px 10px 90px;box-shadow:0 34px 96px rgba(0,0,0,.4),0 0 0 9px rgba(166,195,248,.025);isolation:isolate;transform:rotate(2deg);transition:transform .4s ease}
 .art-outer:hover {transform:rotate(0deg) translateY(-4px)}
 .art-image-wrap {position:absolute;inset:0;background:#05070a;overflow:hidden}
+.art-image-wrap picture {display:block;width:100%;height:100%}
 .art-image-wrap img {width:100%;height:100%;object-fit:cover;object-position:center 49%;filter:contrast(1.035);transition:transform .7s ease}
 .art-outer:hover .art-image-wrap img {transform:scale(1.045)}
 .art-overlay {position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,11,20,.02) 25%,transparent 55%,rgba(6,10,21,.82) 100%)}
