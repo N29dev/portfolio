@@ -312,3 +312,25 @@ img {display:block;max-width:100%}
  .project-bot,.project-creator{min-height:325px}
  .project-featured .planet{width:240px;height:240px;right:0;top:16%}
 }
+
+
+/* Glutony app is installable; make the installation action unmistakable. */
+.project-bot-badge {
+  font:700 10px var(--mono);letter-spacing:.1em;color:#b5e7ff;
+  padding:7px 10px;border-radius:8px;background:rgba(114,169,253,.12);
+  border:1px solid rgba(167,198,255,.2);
+}
+.project-cta-row {display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:20px;}
+.project-cta-row a {display:inline-flex;align-items:center;justify-content:center;
+  min-height:38px;border-radius:9px;padding:9px 12px;font-size:11px;font-weight:800;
+  transition:background .15s,transform .15s,border-color .15s;}
+.project-cta-row a:hover {transform:translateY(-2px);}
+.project-install {background:linear-gradient(110deg,#7edafa,#b3a9ff);color:#0a1624;}
+.project-source {border:1px solid rgba(169,196,247,.25);color:#d2e8ff;background:rgba(145,175,240,.08);}
+.project-source:hover {background:rgba(145,175,240,.16);}
+@media(max-width:530px) {
+ .project-cta-row a {flex:1;}
+}
+@media(prefers-reduced-motion:reduce) {
+ .project-cta-row a:hover {transform:none}
+}
