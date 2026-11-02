@@ -1,7 +1,9 @@
 /* Progressive motion system. No layout-changing animation and no motion when reduced. */
+body {isolation:isolate;}
+.marquee-inner i {display:inline-block;}
 @media (prefers-reduced-motion: no-preference) {
   body::before {
-    content:"";position:fixed;z-index:-2;pointer-events:none;
+    content:"";position:fixed;z-index:-1;pointer-events:none;
     inset:-25%;opacity:.34;
     background:radial-gradient(ellipse 22% 28% at 21% 28%,rgba(85,166,211,.22),transparent 77%),
       radial-gradient(ellipse 23% 24% at 79% 51%,rgba(151,119,237,.22),transparent 75%);
