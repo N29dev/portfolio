@@ -290,3 +290,25 @@ img {display:block;max-width:100%}
 @media(prefers-reduced-motion:reduce) {
  *,*::before,*::after {scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+/* Curated portfolio: one flagship plus two active companion projects. */
+.project-featured{grid-column:span 2;grid-row:span 2;min-height:650px}
+.project-bot,.project-creator{min-height:315px}
+.project-creator{background:linear-gradient(140deg,#272442,#101d33 80%)}
+.project-creator .project-symbol{margin:10px 22px 8px;min-height:49px}
+.project-creator .project-symbol span{font-size:53px}
+.project-featured .planet{width:335px;height:335px;right:11%;top:15%}
+@media(max-width:1100px){
+ .project-featured{grid-column:1/-1;grid-row:auto;min-height:470px}
+ .project-bot,.project-creator{min-height:345px}
+ .project-featured .planet{width:270px;height:270px;right:11%;top:13%}
+}
+@media(max-width:750px){
+ .project-featured{min-height:445px}
+ .project-bot,.project-creator{min-height:350px}
+}
+@media(max-width:530px){
+ .project-featured{grid-column:auto;grid-row:auto;min-height:430px}
+ .project-bot,.project-creator{min-height:325px}
+ .project-featured .planet{width:240px;height:240px;right:0;top:16%}
+}

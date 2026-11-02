@@ -19,7 +19,7 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 
 - Editorial, dark portfolio with the user's Hunger artwork.
 - Mobile and desktop layouts, keyboard-visible focus and reduced-motion behavior.
-- Six project cards grouped into **All projects / BL:R / Algorithms**.
+- Three curated projects: BL:R Server Finder, Glutony, and BL:R Creator Studio. Experimental and test repositories are intentionally excluded.
 - Direct links to GitHub, Codeforces, BL:R tools, Roblox, Discord and other public profiles.
 - No framework, analytics tracker, artificial counters or build step.
 - Project cards and external links work without JavaScript.
