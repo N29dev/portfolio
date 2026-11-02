@@ -1,50 +1,35 @@
-# Nurlybek (N29) — Portfolio
+# N29 — Personal portfolio
 
-Modern personal portfolio website.
+Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yesbolganov (N29).
 
-**Live (after enabling Pages):** https://n29dev.github.io/portfolio
+## Site structure
 
-## How to enable GitHub Pages
+| File | Purpose |
+| --- | --- |
+| `index.html` | Homepage, introduction, project showcase, About section, and contact links |
+| `site.css` | Responsive visual design and reduced-motion support |
+| `site.js` | Optional project-category filters, navigation state, scroll progress |
+| `assets/hunger.avif` | Optimized high-detail portrait used when AVIF is supported |
+| `assets/hunger.webp` | Compatibility fallback for the portrait |
+| `favicon.svg` | N29 brand icon |
+| `robots.txt`, `sitemap.xml` | Search-engine discovery |
+| `CNAME` | Custom domain: `n29.kz` |
 
-1. Go to the repository: https://github.com/N29dev/portfolio
-2. Click **Settings** → **Pages** (left sidebar)
-3. Under **Source**, select **Deploy from a branch**
-4. Branch: `main` → folder: `/ (root)` → Save
-5. Wait 1–2 minutes. Your site will be at:
-   - `https://n29dev.github.io/portfolio`
+## Design and features
 
-## Using your domain `n29.kz`
+- Editorial, dark portfolio with the user's Hunger artwork.
+- Mobile and desktop layouts, keyboard-visible focus and reduced-motion behavior.
+- Six project cards grouped into **All projects / BL:R / Algorithms**.
+- Direct links to GitHub, Codeforces, BL:R tools, Roblox, Discord and other public profiles.
+- No framework, analytics tracker, artificial counters or build step.
+- Project cards and external links work without JavaScript.
 
-Currently `n29.kz` points to the **GK Reaction Trainer** repo.
+## Deployment
 
-### Option A — Make portfolio the main site on n29.kz
-1. In this repo (`portfolio`), go to Settings → Pages
-2. Under **Custom domain**, type `n29.kz` and save
-3. GitHub will create a `CNAME` file
-4. In your domain registrar (DNS settings for n29.kz):
-   - Add / update **A records** to GitHub Pages IPs:
-     ```
-     185.199.108.153
-     185.199.109.153
-     185.199.110.153
-     185.199.111.153
-     ```
-   - Or use **CNAME** record for `www` → `n29dev.github.io`
-5. Remove the old `CNAME` file from the `gk-reaction-trainer` repo (or change it to a subdomain like `gk.n29.kz`)
+This is a static GitHub Pages repository. Merge approved changes into the configured publishing branch (normally `main`). The repository already contains `CNAME` for `n29.kz`. Check **Settings → Pages** if deployment does not update.
 
-### Option B — Keep trainer on n29.kz and put portfolio on a subdomain
-- Use `portfolio.n29.kz` or just use the free GitHub URL `n29dev.github.io/portfolio`
+The BL:R companion site at [blr.n29.kz](https://blr.n29.kz/) lives in the separate [N29dev/blr](https://github.com/N29dev/blr) repository. Deploy this portfolio's portrait assets before merging a BL:R design that references them.
 
-## Customize
+## Edit content
 
-Edit `index.html` to change:
-- Bio text
-- Project descriptions / links
-- Skills
-- Social links
-
-Then commit & push — Pages will update automatically.
-
----
-
-Made for Nurlybek · Aktau, Kazakhstan
+Project cards, About copy and social links are intentionally plain HTML in `index.html`. CSS can be updated in `site.css`, and the enhancement script is isolated in `site.js`. Images are static assets and do not send user-uploaded artwork to a third-party image service.
