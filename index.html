@@ -21,8 +21,10 @@
   <link rel="stylesheet" href="/site.css?v=2">
   <link rel="stylesheet" href="/polish.css?v=1">
   <link rel="stylesheet" href="/motion.css?v=1">
+  <link rel="stylesheet" href="/scroll-story.css?v=1">
   <script defer src="/site.js?v=3"></script>
   <script defer src="/motion.js?v=1"></script>
+  <script defer src="/scroll-story.js?v=1"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -44,6 +46,17 @@
     </div>
   </nav>
 
+  <aside class="story-rail" aria-label="On this page">
+    <div class="story-rail-label"><span class="story-indicator"></span> EXPLORE / N29.KZ</div>
+    <nav class="story-steps" aria-label="Page sections">
+      <a href="#top" data-story-target="top" aria-current="location"><small>00</small><span>INTRO</span></a>
+      <a href="#launchpad" data-story-target="launchpad"><small>01</small><span>SHORTCUTS</span></a>
+      <a href="#work" data-story-target="work"><small>02</small><span>WORK</span></a>
+      <a href="#about" data-story-target="about"><small>03</small><span>ABOUT</span></a>
+      <a href="#contact" data-story-target="contact"><small>04</small><span>CONNECT</span></a>
+    </nav>
+    <div class="story-track" aria-hidden="true"><span class="story-track-fill"></span></div>
+  </aside>
   <main id="main">
     <section class="hero wrap" id="top">
       <div class="hero-copy">
@@ -73,6 +86,7 @@
         </div>
         <div class="art-note" aria-hidden="true"><span>MADE OF</span><strong>LOGIC<span> / </span>INSTINCT</strong></div>
         <div class="art-bottom"><span class="art-caption"><span class="online-pip"></span> PERSONAL AVATAR / HUNGER</span><button type="button" class="art-view" data-portrait-open aria-label="View full-resolution Hunger artwork">View full artwork ↗</button></div>
+        <p class="art-credit">Illustration by <strong>Omnixeno</strong></p>
       </div>
       <a class="hero-scroll" href="#launchpad">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
     </section>
@@ -202,7 +216,7 @@
   <dialog class="portrait-dialog" id="portrait-lightbox" aria-label="Hunger artwork, full resolution">
     <button class="portrait-close" type="button" data-portrait-close aria-label="Close full-size artwork">Close ✕</button>
     <picture><source srcset="/assets/hunger.avif" type="image/avif"><img src="/assets/hunger.webp" width="1365" height="2048" decoding="async" alt="Full-resolution artwork of Hunger with golden eyes, light hair, and a glitch-patterned face"></picture>
-    <p>HUNGER <span>/ N29 — ORIGINAL ARTWORK</span></p>
+    <p>HUNGER <span>Illustration by Omnixeno · N29 profile artwork</span></p>
   </dialog>
   <dialog class="command-dialog" id="command-menu" aria-labelledby="command-title">
     <div class="command-head"><div><span>DIRECTORY / N29.KZ</span><h2 id="command-title">Go somewhere.</h2></div><button type="button" class="command-close" data-command-close aria-label="Close quick navigation">Esc ✕</button></div>

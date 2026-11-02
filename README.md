@@ -35,6 +35,14 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 - A small process section and clearer supporting copy round out the portfolio.
 - `polish.css` contains the new presentation layer; `site.js` owns the interaction logic, while the site remains usable without JavaScript.
 
+## Artist credit and scrolling chapters (November 2026)
+
+- The Hunger portrait is visibly credited to **Omnixeno** in the hero and full-artwork viewer. The BL:R homepage also displays an artist credit.
+- Desktop readers get a compact page-chapter navigation with the current section and overall reading progress.
+- Section headings gain a subtle animated accent, with small bounded background/art details that respond to scrolling.
+- Animations use passive listeners and animation-frame batching, and are disabled for reduced-motion users.
+- No experimental projects were added, and the full-resolution avatar assets remain unchanged.
+
 ## Deployment
 
 This is a static GitHub Pages repository. Merge approved changes into the configured publishing branch (normally `main`). The repository already contains `CNAME` for `n29.kz`. Check **Settings → Pages** if deployment does not update.

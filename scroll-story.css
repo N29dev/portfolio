@@ -1,0 +1,77 @@
+/* Scroll chapters and illustration credit, layered over the established motion design.
+   No scroll hijacking and no animation that conceals critical content. */
+.art-credit {margin:9px 3px 0;color:#92a6c1;letter-spacing:.015em;font-size:12px;text-align:right;}
+.art-credit strong {color:#d4e4f7;font-weight:800;}
+.story-rail {
+  position:fixed;z-index:52;right:clamp(12px,2vw,34px);top:50%;
+  transform:translateY(-42%);display:flex;flex-direction:column;gap:15px;
+  max-width:160px;pointer-events:auto;
+}
+.story-rail-label {
+  font:700 9px/1.5 var(--mono);letter-spacing:.05em;color:#7996b4;
+  display:flex;align-items:center;gap:8px;white-space:nowrap;
+}
+.story-indicator {width:6px;height:6px;border-radius:50%;background:#b9f6c7;box-shadow:0 0 0 4px rgba(137,228,191,.09);}
+.story-steps {display:flex;flex-direction:column;gap:6px;}
+.story-steps a {
+  display:flex;align-items:center;gap:9px;padding:7px 11px;
+  border-radius:9px;border:1px solid transparent;background:rgba(12,23,38,.26);
+  color:#7892ad;font:700 10px var(--mono);letter-spacing:.035em;
+  transition:background .24s,color .24s,transform .24s,border-color .24s;
+}
+.story-steps a small {font-size:9px;color:#718aa7;}
+.story-steps a:hover {color:#e4f4ff;background:rgba(35,60,89,.83);}
+.story-steps a[aria-current="location"] {
+  background:rgba(28,48,76,.94);border-color:rgba(142,217,251,.28);
+  color:#e4f6ff;transform:translateX(-5px);box-shadow:0 7px 25px rgba(0,0,0,.18);
+}
+.story-steps a[aria-current="location"] small {color:#8addff;}
+.story-track {margin-left:18px;height:50px;width:2px;background:rgba(146,197,255,.14);border-radius:3px;overflow:hidden;}
+.story-track-fill {display:block;height:var(--chapter-progress,0%);width:100%;border-radius:3px;background:linear-gradient(#83e2ff,#b4a6fa);transition:height .14s linear;}
+/* Typography and graphical details animate with the story instead of every scroll event. */
+@media (prefers-reduced-motion:no-preference) {
+  .story-rail {animation:story-nav-enter 1s .5s both;}
+  @keyframes story-nav-enter {
+    from {opacity:0;translate:22px 0;}
+    to {opacity:1;translate:0 0;}
+  }
+  .art-credit {animation:story-credit-in .8s .85s both;}
+  @keyframes story-credit-in {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+  .section .eyebrow,.launchpad-kicker {transition:color .5s ease,letter-spacing .5s ease;}
+  .section[data-story-active="true"] .eyebrow {color:#c8e8ff;letter-spacing:.16em;}
+  .section h2,.launchpad-heading h2 {position:relative;width:fit-content;}
+  .section h2::after,.launchpad-heading h2::after {
+    content:"";position:absolute;left:0;bottom:-13px;width:100%;height:2px;
+    background:linear-gradient(90deg,#83defd,#ada8ff,transparent);
+    transform:scaleX(0);transform-origin:left center;opacity:.65;
+    transition:transform .9s cubic-bezier(.18,.83,.2,1);
+  }
+  .section[data-story-seen="true"] h2::after,.launchpad[data-story-seen="true"] h2::after {transform:scaleX(1);}
+  .story-steps a[aria-current="location"] {transition:background .25s,border-color .25s,color .25s,transform .25s;}
+  .hero-art .art-note {translate:0 var(--art-scroll-offset,0px);transition:translate .1s linear;}
+  .background-grid {transform:translate3d(0,var(--background-scroll-offset,0px),0);}
+  .approach-steps span {transition:transform .28s ease,border-color .28s ease,background .28s ease;}
+  .approach-steps span:hover {transform:translateY(-4px);border-color:rgba(136,210,252,.4);background:#182943;}
+  .contact-links a i {transition:transform .25s;}
+  .contact-links a:hover i {transform:translate(3px,-3px);}
+}
+@media(max-width:1400px) {
+  .story-rail {right:8px;}
+}
+@media(max-width:1550px) and (min-width:1101px) {
+  .story-rail {right:8px;max-width:45px;}
+  .story-rail-label,.story-steps a span,.story-track {display:none;}
+  .story-steps a {justify-content:center;padding:9px 8px;min-width:35px;}
+}
+@media(max-width:1100px) {
+  .story-rail {display:none;}
+}
+@media(max-width:750px) {
+  .art-credit {text-align:center;font-size:11px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .story-rail,.art-credit {animation:none!important;}
+  .story-track-fill {transition:none!important;}
+  .section h2::after,.launchpad-heading h2::after {transition:none!important;transform:scaleX(1)!important;}
+  .art-note,.background-grid {transform:none!important;translate:0 0!important;}
+}
