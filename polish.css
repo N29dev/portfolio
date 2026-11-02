@@ -289,3 +289,37 @@ body { text-rendering: optimizeLegibility; }
   .art-outer:hover,.launchpad-link:hover,.project:hover {transform:none!important;}
   .art-outer:hover .art-image-wrap img {transform:none;}
 }
+
+/* Original art viewer: always render the full image, never crop it. */
+.art-view {
+  border:0;background:transparent;color:#96ddfb;padding:1px 0;
+  font:700 10px var(--mono);letter-spacing:.05em;white-space:nowrap;
+}
+.art-view:hover {color:#fff;text-decoration:underline;text-underline-offset:4px;}
+.portrait-dialog {
+  padding:13px;border-radius:18px;border:1px solid rgba(177,216,255,.30);
+  background:#0b111c;color:#f3f7ff;max-width:min(920px,calc(100vw - 20px));
+  max-height:calc(100dvh - 20px);width:max-content;overflow:auto;
+  box-shadow:0 35px 130px rgba(0,0,0,.82);
+}
+.portrait-dialog::backdrop {background:rgba(3,5,10,.88);backdrop-filter:blur(9px);}
+.portrait-dialog picture {display:block;max-height:calc(100dvh - 110px);}
+.portrait-dialog img {display:block;max-width:100%;max-height:calc(100dvh - 110px);width:auto;height:auto;object-fit:contain;image-rendering:auto;}
+.portrait-dialog p {
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  margin:10px 2px 1px;color:#e5f4ff;font:700 11px var(--mono);
+}
+.portrait-dialog p span {color:#91a6c4;}
+.portrait-close {
+  position:sticky;z-index:2;top:0;float:right;margin:0 0 8px 10px;
+  padding:8px 11px;border:1px solid rgba(190,222,255,.25);
+  background:#1e2e47;color:#f5f9ff;border-radius:9px;
+  font:700 11px var(--mono);
+}
+.portrait-close:hover {background:#314868;}
+@media(max-width:530px) {
+ .art-view {font-size:9px;}
+ .art-bottom {gap:9px;}
+ .portrait-dialog {padding:7px;border-radius:12px;}
+ .portrait-dialog p {font-size:9px;}
+}
