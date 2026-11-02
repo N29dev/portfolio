@@ -26,6 +26,15 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 - No framework, analytics tracker, artificial counters or build step.
 - Project cards and external links work without JavaScript.
 
+## Studio edition (November 2026)
+
+- A four-destination BL:R launchpad links to public 8v8, Pro, customs, and the official Glutony Discord user-install flow.
+- The full-resolution Hunger artwork can be viewed without cropping by selecting **View full artwork**. The main hero no longer rotates or applies contrast filters that can soften fine details.
+- An accessible quick-navigation dialog opens using **⌘K / Ctrl+K** or the visible navigation control. Search results are generated from real on-site sections and public links; no API keys or tracking.
+- The featured projects remain **Server Finder**, **Glutony**, and **Creator Studio**; experimental repositories remain excluded.
+- A small process section and clearer supporting copy round out the portfolio.
+- `polish.css` contains the new presentation layer; `site.js` owns the interaction logic, while the site remains usable without JavaScript.
+
 ## Deployment
 
 This is a static GitHub Pages repository. Merge approved changes into the configured publishing branch (normally `main`). The repository already contains `CNAME` for `n29.kz`. Check **Settings → Pages** if deployment does not update.
