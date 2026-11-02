@@ -93,8 +93,8 @@
       input.focus();
     }
     const close=()=>{if(dialog.open)dialog.close();};
-    $('[data-command-open]').forEach(button=>button.addEventListener('click',open));
-    $('[data-command-close]').forEach(button=>button.addEventListener('click',close));
+    $$('[data-command-open]').forEach(button=>button.addEventListener('click',open));
+    $$('[data-command-close]').forEach(button=>button.addEventListener('click',close));
     input.addEventListener('input',render);
     input.addEventListener('keydown',event=>{
       if((event.key==='ArrowDown'||event.key==='ArrowUp')&&matches.length){
@@ -116,7 +116,7 @@
       }
     });
     const isMac=/(Mac|iPhone|iPad)/i.test(navigator.platform||'');
-    $('.command-trigger kbd,.footer-search kbd').forEach(kbd=>kbd.textContent=isMac?'⌘ K':'Ctrl K');
+    $$('.command-trigger kbd,.footer-search kbd').forEach(kbd=>kbd.textContent=isMac?'⌘ K':'Ctrl K');
   }
   setupCommandPalette();
 
