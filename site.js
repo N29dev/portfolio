@@ -120,6 +120,18 @@
   }
   setupCommandPalette();
 
+  function setupPortraitViewer(){
+    const dialog=$('#portrait-lightbox');
+    const opener=$('[data-portrait-open]');
+    const close=$('[data-portrait-close]');
+    if(!dialog||!opener||!close||typeof dialog.showModal!=='function')return;
+    opener.addEventListener('click',()=>dialog.showModal());
+    close.addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+    dialog.addEventListener('close',()=>opener.focus());
+  }
+  setupPortraitViewer();
+
   if('IntersectionObserver' in window){
     const navLinks=$$('.nav-links a');
     const observer=new IntersectionObserver(entries=>{
