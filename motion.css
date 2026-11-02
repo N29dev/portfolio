@@ -1,0 +1,90 @@
+/* Progressive motion system. No layout-changing animation and no motion when reduced. */
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    content:"";position:fixed;z-index:-2;pointer-events:none;
+    inset:-25%;opacity:.34;
+    background:radial-gradient(ellipse 22% 28% at 21% 28%,rgba(85,166,211,.22),transparent 77%),
+      radial-gradient(ellipse 23% 24% at 79% 51%,rgba(151,119,237,.22),transparent 75%);
+    animation:n29-atmosphere 24s ease-in-out infinite alternate;
+  }
+  @keyframes n29-atmosphere {
+    from {transform:translate3d(-1%,0%,0) rotate(-2deg)}
+    to {transform:translate3d(3%,2%,0) rotate(3deg)}
+  }
+  .hero-copy .kicker {animation:n29-hero-enter .62s .02s both}
+  .hero-intro {animation:n29-hero-enter .68s .13s both}
+  .hero h1 {animation:n29-hero-enter .76s .21s both}
+  .hero-text {animation:n29-hero-enter .72s .33s both}
+  .hero-actions {animation:n29-hero-enter .65s .40s both}
+  .hero-signal,.hero-tags {animation:n29-hero-enter .68s .50s both}
+  .hero-art {animation:n29-art-enter .95s .21s both}
+  @keyframes n29-hero-enter {
+    from {opacity:0;transform:translate3d(0,22px,0);filter:blur(4px)}
+    to {opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+  }
+  @keyframes n29-art-enter {
+    from {opacity:0;transform:translate3d(34px,12px,0) scale(.97)}
+    to {opacity:1;transform:translate3d(0,0,0) scale(1)}
+  }
+  .art-outer::before {
+    content:"";position:absolute;z-index:3;pointer-events:none;inset:0;
+    background:linear-gradient(112deg,transparent 40%,rgba(255,255,255,.14) 49%,transparent 59%);
+    background-size:260% 100%;background-position:-130% 0;
+    animation:n29-art-sheen 12s 1.5s ease-in-out infinite;
+    opacity:.37;
+  }
+  @keyframes n29-art-sheen {
+    0%,27%,100% {background-position:-130% 0}
+    47%,65% {background-position:150% 0}
+  }
+  .art-corner-a,.art-corner-b {animation:n29-corner-glow 4s ease-in-out infinite alternate}
+  @keyframes n29-corner-glow {
+    from {border-color:#bbef8f;opacity:.52}
+    to {border-color:#9ed8ff;opacity:1}
+  }
+  .kicker-signal,.online-pip {animation:n29-pip 3.4s ease-in-out infinite}
+  @keyframes n29-pip {50% {box-shadow:0 0 0 8px rgba(187,239,143,.045)}}
+  html.n29-motion .n29-reveal {
+    opacity:0;transform:translate3d(0,28px,0);filter:blur(4px);
+    transition:opacity .78s cubic-bezier(.22,1,.36,1),
+      transform .78s cubic-bezier(.22,1,.36,1),filter .78s ease;
+  }
+  html.n29-motion .n29-reveal.is-visible {
+    opacity:1;transform:translate3d(0,0,0);filter:none;
+  }
+  html.n29-motion .n29-reveal[data-reveal-index="1"] {transition-delay:.09s}
+  html.n29-motion .n29-reveal[data-reveal-index="2"] {transition-delay:.17s}
+  html.n29-motion .n29-reveal[data-reveal-index="3"] {transition-delay:.25s}
+  .project,.launchpad-link,.contact-card {position:relative;isolation:isolate;}
+  .project::after,.launchpad-link::after {
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    border-radius:inherit;opacity:0;transition:opacity .26s ease;
+    background:radial-gradient(350px circle at var(--glow-x,50%) var(--glow-y,50%),
+       rgba(127,202,253,.14),transparent 62%);
+  }
+  .project:hover::after,.launchpad-link:hover::after {opacity:1}
+  .project-arrow,.launchpad-arrow {transition:transform .22s cubic-bezier(.2,.8,.2,1),color .22s ease}
+  .launchpad-link:hover .launchpad-arrow {transform:translate3d(3px,-3px,0)}
+  .project:hover .project-arrow {transform:rotate(45deg) scale(1.05)}
+  .marquee-inner i {animation:n29-marquee-symbol 9s ease-in-out infinite alternate}
+  .marquee-inner i:nth-child(4n) {animation-delay:-4s}
+  @keyframes n29-marquee-symbol {to{transform:rotate(85deg);color:#b8a6fb}}
+  .launchpad-featured {animation:n29-border-pulse 5s ease-in-out infinite}
+  @keyframes n29-border-pulse {
+    50% {border-color:rgba(184,166,251,.6);box-shadow:0 0 21px rgba(143,132,246,.10)}
+  }
+  .contact-card::after {
+    content:"";position:absolute;pointer-events:none;z-index:0;width:480px;height:480px;
+    right:-190px;top:-250px;border-radius:50%;
+    background:radial-gradient(circle,rgba(140,151,249,.095),transparent 70%);
+    animation:n29-contact-orb 18s ease-in-out infinite alternate;
+  }
+  @keyframes n29-contact-orb {to{transform:translate3d(-80px,75px,0)}}
+}
+@media (prefers-reduced-motion: reduce) {
+  html.n29-motion .n29-reveal {opacity:1!important;filter:none!important;transform:none!important}
+  .art-outer::before,body::before,.project::after,.launchpad-link::after {animation:none!important}
+}
+@media (hover:none) {
+  .project::after,.launchpad-link::after {display:none}
+}
