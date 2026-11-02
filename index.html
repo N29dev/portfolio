@@ -70,7 +70,7 @@
           <div class="art-index"><span>01 / ALTER EGO</span><strong>HUNGER</strong></div>
         </div>
         <div class="art-note" aria-hidden="true"><span>MADE OF</span><strong>LOGIC<span> / </span>INSTINCT</strong></div>
-        <div class="art-bottom"><span class="art-caption"><span class="online-pip"></span> PERSONAL AVATAR / HUNGER</span><span class="art-coordinate">43° N · 76° E</span></div>
+        <div class="art-bottom"><span class="art-caption"><span class="online-pip"></span> PERSONAL AVATAR / HUNGER</span><button type="button" class="art-view" data-portrait-open aria-label="View full-resolution Hunger artwork">View full artwork ↗</button></div>
       </div>
       <a class="hero-scroll" href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
     </section>
@@ -197,6 +197,11 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+  <dialog class="portrait-dialog" id="portrait-lightbox" aria-label="Hunger artwork, full resolution">
+    <button class="portrait-close" type="button" data-portrait-close aria-label="Close full-size artwork">Close ✕</button>
+    <picture><source srcset="/assets/hunger.avif" type="image/avif"><img src="/assets/hunger.webp" width="1365" height="2048" decoding="async" alt="Full-resolution artwork of Hunger with golden eyes, light hair, and a glitch-patterned face"></picture>
+    <p>HUNGER <span>/ N29 — ORIGINAL ARTWORK</span></p>
+  </dialog>
   <dialog class="command-dialog" id="command-menu" aria-labelledby="command-title">
     <div class="command-head"><div><span>DIRECTORY / N29.KZ</span><h2 id="command-title">Go somewhere.</h2></div><button type="button" class="command-close" data-command-close aria-label="Close quick navigation">Esc ✕</button></div>
     <label class="command-input-wrap"><span aria-hidden="true">⌕</span><input id="command-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search projects, links, socials…" aria-label="Search destinations"></label>
