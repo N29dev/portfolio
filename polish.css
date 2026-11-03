@@ -360,3 +360,28 @@ body { text-rendering: optimizeLegibility; }
   .project-featured .planet {width:230px;height:230px;right:0;top:15%;}
   .hero-art .art-note {margin-left:3px;}
 }
+
+/* BL:R ecosystem destinations: compact companions to the three featured builds. */
+.ecosystem {margin-top:45px;}
+.ecosystem-heading {display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:19px;}
+.ecosystem-heading .eyebrow {font:700 10px var(--mono);letter-spacing:.12em;}
+.ecosystem-heading h3 {margin:10px 0 0;font:700 clamp(26px,3.2vw,39px)/1.12 var(--heading);letter-spacing:-.06em;}
+.ecosystem-heading h3 em {color:var(--lavender);font-style:normal;}
+.ecosystem-heading p {margin:0;max-width:290px;color:#92a7c2;font-size:13px;line-height:1.7;}
+.ecosystem-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;}
+.ecosystem-card {min-width:0;min-height:205px;display:flex;flex-direction:column;align-items:flex-start;padding:20px;border:1px solid rgba(168,199,246,.17);border-radius:17px;background:linear-gradient(145deg,rgba(24,40,66,.88),rgba(13,22,39,.9));transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease;}
+.ecosystem-card:hover,.ecosystem-card:focus-visible {transform:translateY(-4px);border-color:rgba(123,210,255,.52);background:linear-gradient(145deg,rgba(34,54,84,.96),rgba(15,26,46,.96));box-shadow:0 16px 35px rgba(0,0,0,.18);}
+.ecosystem-card-top {display:flex;width:100%;align-items:center;justify-content:space-between;margin-bottom:17px;}
+.ecosystem-icon {display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(131,197,255,.10);border:1px solid rgba(163,207,255,.15);color:#a7e3ff;font:700 25px/1 var(--heading);}
+.ecosystem-card:nth-child(2) .ecosystem-icon {color:#c2eaa9;background:rgba(164,224,154,.09);}
+.ecosystem-card:nth-child(3) .ecosystem-icon {color:#d1b8ff;background:rgba(187,159,255,.09);}
+.ecosystem-card:nth-child(4) .ecosystem-icon {color:#f1caa0;background:rgba(239,195,147,.08);}
+.ecosystem-arrow {font-size:21px;color:#87a8c8;transition:transform .2s ease;}
+.ecosystem-card:hover .ecosystem-arrow {transform:translate(2px,-2px);color:#bceaff;}
+.ecosystem-card strong {color:#f4f7ff;font:700 19px/1.2 var(--heading);letter-spacing:-.035em;}
+.ecosystem-card small {display:block;color:#9bafca;font:400 12px/1.65 var(--body);margin-top:9px;}
+.ecosystem-tag {margin-top:auto;padding-top:15px;color:#80cee9;font:700 9px var(--mono);letter-spacing:.11em;}
+@media(max-width:1100px) {.ecosystem-grid {grid-template-columns:repeat(2,minmax(0,1fr));}.ecosystem-card {min-height:185px;}}
+@media(max-width:600px) {.ecosystem {margin-top:33px;}.ecosystem-heading {align-items:start;flex-direction:column;gap:9px;}.ecosystem-grid {gap:10px;}.ecosystem-card {padding:16px;min-height:195px;}.ecosystem-card strong {font-size:17px;}.ecosystem-icon {width:38px;height:38px;font-size:22px;}}
+@media(max-width:390px) {.ecosystem-grid {grid-template-columns:1fr;}.ecosystem-card {min-height:155px;}}
+@media(prefers-reduced-motion:reduce) {.ecosystem-card,.ecosystem-arrow {transition:none;}.ecosystem-card:hover {transform:none;}}
