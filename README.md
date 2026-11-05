@@ -7,6 +7,7 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 | File | Purpose |
 | --- | --- |
 | `index.html` | Homepage, introduction, project showcase, About section, and contact links |
+| `achievements/` | Verified competition timeline (2020–2026), ICPC placements, Codeforces milestones, and selected builds |
 | `site.css` | Responsive visual design and reduced-motion support |
 | `site.js` | Optional project-category filters, navigation state, scroll progress |
 | `assets/hunger.avif` | Optimized high-detail portrait used when AVIF is supported |
@@ -52,3 +53,7 @@ The BL:R companion site at [blr.n29.kz](https://blr.n29.kz/) lives in the separa
 ## Edit content
 
 Project cards, About copy and social links are intentionally plain HTML in `index.html`. CSS can be updated in `site.css`, and the enhancement script is isolated in `site.js`. Images are static assets and do not send user-uploaded artwork to a third-party image service.
+
+## Achievements archive (November 2026)
+
+The public [Achievements page](https://n29.kz/achievements/) uses the same dark portfolio design with accessible category/year filters and links to public scoreboards. Years without confirmed results are intentionally left unfilled. Regional golds are labeled as self-reported until official sources are added. DOOM OpenGL and Aktobe training are intentionally excluded from this archive.
