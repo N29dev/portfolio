@@ -46,3 +46,6 @@
 @media(max-width:920px){.a-hero-layout{grid-template-columns:1fr}.a-medals{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:690px){.a-hero{padding-top:55px}.a-card-grid,.a-medals,.a-extra-grid{grid-template-columns:1fr}.a-section{padding-top:72px}.a-card{padding:17px;gap:12px}.a-rank{min-width:57px;min-height:55px}.a-hero-bottom{margin-top:45px}.a-filters{align-items:stretch}.a-filters label{width:100%;display:flex;justify-content:space-between;align-items:center}.a-filters select{flex:1;max-width:230px}.a-categories{width:100%;justify-content:space-between}.a-categories button{padding-inline:8px}}
 @media(prefers-reduced-motion:reduce){.a-medal,.a-card{transition:none}}
+
+/* Keep the return path accessible where the shared mobile nav hides links. */
+@media(max-width:750px){.achievements-page .nav-cta{display:inline-flex}}
