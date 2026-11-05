@@ -35,6 +35,7 @@
     const commands=[
       {title:'Home',desc:'Back to the top',href:'#top',icon:'⌂',keywords:'n29 home'},
       {title:'Projects',desc:'Selected tools and builds',href:'#work',icon:'◈',keywords:'work portfolio'},
+      {title:'Achievements',desc:'Olympiad medals, ICPC results and milestones',href:'/achievements/',icon:'🏅',keywords:'hall of fame awards national olympiad icpc scoreboard medals achievements'},
       {title:'About',desc:'Get to know N29',href:'#about',icon:'✳',keywords:'nurlybek who developer'},
       {title:'Contact',desc:'Find me online',href:'#contact',icon:'✉',keywords:'social message'},
       {title:'8v8 server finder',desc:'Find BL:R 8v8 matches',href:'https://blr.n29.kz/servers/?mode=8v8',icon:'⚽',keywords:'roblox public servers lobby glutony'},
