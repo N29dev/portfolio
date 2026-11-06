@@ -334,3 +334,105 @@ img {display:block;max-width:100%}
 @media(prefers-reduced-motion:reduce) {
  .project-cta-row a:hover {transform:none}
 }
+
+
+/* InputDeck — desktop utility joins the selected builds without crowding BL:R projects. */
+.project-inputdeck {
+  grid-column:1 / -1;
+  min-height:285px;
+  background:radial-gradient(circle at 20% 25%,rgba(94,153,237,.18),transparent 55%),
+             linear-gradient(128deg,#14213b 4%,#11182b 70%,#181c34);
+}
+.project-inputdeck .project-top {padding:19px 22px 0}
+.inputdeck-showcase {
+  display:grid;
+  grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
+  gap:clamp(20px,4vw,68px);
+  align-items:center;
+  padding:16px clamp(20px,4vw,36px) 27px;
+}
+.project-inputdeck .project-body {margin-top:0;padding:0;max-width:520px}
+.project-inputdeck .project-body h3 {font-size:clamp(25px,3vw,32px)}
+.project-inputdeck .project-body p {max-width:510px}
+.project-inputdeck .project-cta-row {margin-top:19px}
+.inputdeck-demo {
+  width:100%;
+  max-width:496px;
+  border:1px solid rgba(165,199,255,.25);
+  border-radius:20px;
+  background:rgba(7,12,23,.85);
+  box-shadow:0 24px 50px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.03);
+  padding:16px;
+  transition:border-color .2s,transform .3s;
+}
+.project-inputdeck:hover .inputdeck-demo {border-color:rgba(123,190,255,.48);transform:translateY(-2px)}
+.inputdeck-demo-heading {
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+  gap:12px;
+  font:700 10px/1 var(--mono);
+  letter-spacing:.14em;
+  color:#a7b9d5;
+  text-align:center;
+  margin-bottom:13px;
+}
+.inputdeck-demo-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+  gap:12px;
+}
+.inputdeck-demo-keys {
+  min-width:0;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:5px;
+}
+.inputdeck-demo-keys span {
+  display:grid;place-items:center;
+  height:28px;min-width:0;
+  padding:0 2px;
+  background:rgba(255,255,255,.085);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:7px;
+  font:700 clamp(8px,.9vw,11px)/1 var(--mono);
+  color:#edf3ff;
+}
+.inputdeck-demo-keys span:nth-child(n+9):nth-child(-n+12){font-size:8px}
+.inputdeck-demo-keys span.inputdeck-demo-active {
+  background:rgba(71,141,250,.75);
+  border-color:rgba(151,202,255,.85);
+  box-shadow:0 0 14px rgba(74,153,255,.17);
+}
+.inputdeck-demo-keys .inputdeck-demo-space {grid-column:1/-1;letter-spacing:.11em}
+.inputdeck-demo-pad {
+  position:relative;
+  min-width:0;min-height:127px;
+  border-radius:11px;
+  background:linear-gradient(145deg,#1b2a47,#111e32);
+  border:1px solid rgba(170,206,250,.26);
+}
+.inputdeck-demo-finger {
+  position:absolute;top:31%;left:61%;
+  width:9px;height:9px;border-radius:50%;
+  background:#8dccff;
+  box-shadow:0 0 0 12px rgba(81,158,251,.18),0 0 20px rgba(114,201,255,.24);
+}
+.inputdeck-demo-finger-alt {top:68%;left:35%;opacity:.65}
+@media(max-width:750px){
+  .inputdeck-showcase {grid-template-columns:1fr;gap:20px;padding:17px 21px 25px}
+  .project-inputdeck {min-height:0}
+  .project-inputdeck .project-body {max-width:none}
+  .inputdeck-demo {max-width:500px}
+  .inputdeck-demo-keys span {font-size:10px}
+}
+@media(max-width:530px){
+  .project-inputdeck .project-top {padding:17px 17px 0}
+  .inputdeck-showcase {padding:15px 16px 22px}
+  .inputdeck-demo {padding:10px;border-radius:15px}
+  .inputdeck-demo-layout,.inputdeck-demo-heading {gap:8px}
+  .inputdeck-demo-keys {gap:4px}
+  .inputdeck-demo-keys span {height:25px;font-size:9px}
+  .inputdeck-demo-keys span:nth-child(n+9):nth-child(-n+12){font-size:7px}
+  .inputdeck-demo-pad {min-height:112px}
+}
+@media(prefers-reduced-motion:reduce){
+  .project-inputdeck:hover .inputdeck-demo {transform:none}
+}
