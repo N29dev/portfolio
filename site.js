@@ -43,6 +43,7 @@
       {title:'Community customs',desc:'Join player-hosted matches',href:'https://blr.n29.kz/servers/customs/',icon:'🤝',keywords:'private server match roblox'},
       {title:'Glutony Discord app',desc:'Add the app through Discord',href:'https://discord.com/oauth2/authorize?client_id=1563907646757666926&integration_type=1&scope=applications.commands',icon:'✦',keywords:'bot commands install invite'},
       {title:'Creator Studio',desc:'Clip, compress, patch and inspect videos',href:'https://blr.n29.kz/#tools',icon:'🎬',keywords:'mp4 tiktok ffmpeg video'},
+      {title:'InputDeck',desc:'macOS keyboard and trackpad overlay — download beta',href:'https://github.com/N29dev/InputDeck/releases',icon:'⌨',keywords:'mac os apple silicon intel keyboard trackpad obs overlay swift inputdeck'},
       {title:'GitHub',desc:'Source code and public repositories',href:'https://github.com/N29dev',icon:'⌘',keywords:'developer code'},
       {title:'Codeforces',desc:'Competitive programming profile',href:'https://codeforces.com/profile/N29',icon:'∑',keywords:'algorithms competitive programming'},
       {title:'TikTok',desc:'@0nlyhunger',href:'https://www.tiktok.com/@0nlyhunger',icon:'▶',keywords:'videos edits short'},
