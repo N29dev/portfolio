@@ -20,7 +20,7 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 
 - Editorial, dark portfolio with the user's Hunger artwork.
 - Mobile and desktop layouts, keyboard-visible focus and reduced-motion behavior.
-- Three curated projects: BL:R Server Finder, Glutony, and BL:R Creator Studio. Experimental and test repositories are intentionally excluded.
+- Four curated projects: BL:R Server Finder, Glutony, BL:R Creator Studio, and InputDeck for macOS. Other experimental and test repositories are intentionally excluded.
 - Direct links to GitHub, Codeforces, BL:R tools, Roblox, Discord and other public profiles.
 - Glutony project card has a dedicated Discord user-install OAuth link and a separate GitHub source link.
 - N29's TikTok account is linked in the contact section as [@0nlyhunger](https://www.tiktok.com/@0nlyhunger).
@@ -32,7 +32,7 @@ Source for **[n29.kz](https://n29.kz/)**, the personal portfolio of Nurlybek Yes
 - A four-destination BL:R launchpad links to public 8v8, Pro, customs, and the official Glutony Discord user-install flow.
 - The full-resolution Hunger artwork can be viewed without cropping by selecting **View full artwork**. The main hero no longer rotates or applies contrast filters that can soften fine details.
 - An accessible quick-navigation dialog opens using **⌘K / Ctrl+K** or the visible navigation control. Search results are generated from real on-site sections and public links; no API keys or tracking.
-- The featured projects remain **Server Finder**, **Glutony**, and **Creator Studio**; experimental repositories remain excluded.
+- The BL:R featured projects remain **Server Finder**, **Glutony**, and **Creator Studio**, with **InputDeck** added as a separate macOS app project; other experimental repositories remain excluded.
 - A small process section and clearer supporting copy round out the portfolio.
 - `polish.css` contains the new presentation layer; `site.js` owns the interaction logic, while the site remains usable without JavaScript.
 
@@ -57,3 +57,10 @@ Project cards, About copy and social links are intentionally plain HTML in `inde
 ## Achievements archive (November 2026)
 
 The public [Achievements page](https://n29.kz/achievements/) uses the same dark portfolio design with accessible category/year filters and links to public scoreboards. Years without confirmed results are intentionally left unfilled. Regional golds are labeled as self-reported until official sources are added. DOOM OpenGL and Aktobe training are intentionally excluded from this archive.
+
+## InputDeck macOS utility (November 2026)
+
+- InputDeck has its own full-width card in the selected builds with a lightweight CSS keyboard and trackpad preview matching the portfolio's design.
+- Links to [prebuilt macOS releases](https://github.com/N29dev/InputDeck/releases) and [GitHub source](https://github.com/N29dev/InputDeck) make the project usable by visitors who do not want to compile it.
+- A Quick jump search entry links directly to InputDeck releases.
+- Preview is decorative rather than a live keyboard listener: the portfolio website does not capture any user inputs.
