@@ -61,6 +61,6 @@ The public [Achievements page](https://n29.kz/achievements/) uses the same dark 
 ## InputDeck macOS utility (November 2026)
 
 - InputDeck has its own full-width card in the selected builds with a lightweight CSS keyboard and trackpad preview matching the portfolio's design.
-- Links to [prebuilt macOS releases](https://github.com/N29dev/InputDeck/releases) and [GitHub source](https://github.com/N29dev/InputDeck) make the project usable by visitors who do not want to compile it.
+- Links to [latest prebuilt macOS Continuous Preview](https://github.com/N29dev/InputDeck/releases/tag/continuous) and [GitHub source](https://github.com/N29dev/InputDeck) make the project usable by visitors who do not want to compile it.
 - A Quick jump search entry links directly to InputDeck releases.
 - Preview is decorative rather than a live keyboard listener: the portfolio website does not capture any user inputs.
