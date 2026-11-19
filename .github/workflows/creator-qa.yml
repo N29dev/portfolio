@@ -1,0 +1,22 @@
+name: Creator Studio QA
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  routes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test creator/routes.test.mjs
+      - run: |
+          node --check creator/compress.mjs
+          node --check creator/tiktok-info.js
+          node --check creator/site-experience.js
+          node --check creator/site-motion.js
+          node --check creator/ffmpeg-worker.js

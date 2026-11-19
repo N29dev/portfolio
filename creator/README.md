@@ -1,0 +1,2 @@
+# N29 Creator Studio
+Moved from BL:R's static creator pages, preserving browser-side tools. New primary URL: https://n29.kz/creator/. No BL:R account or Worker is required. Old BL:R URLs should remain available until the new origin has been deployed and checked with real media. TikTok metadata and third-party CDN requests still depend on those services' CORS policies. FFmpeg's local worker is served from /creator/ffmpeg-worker.js.
