@@ -42,6 +42,7 @@
       {title:'Pro servers',desc:'Browse competitive lobbies',href:'https://blr.n29.kz/servers/?mode=pro',icon:'🏆',keywords:'roblox game server finder'},
       {title:'Community customs',desc:'Join player-hosted matches',href:'https://blr.n29.kz/servers/customs/',icon:'🤝',keywords:'private server match roblox'},
       {title:'Glutony Discord app',desc:'Add the app through Discord',href:'https://discord.com/oauth2/authorize?client_id=1563907646757666926&integration_type=1&scope=applications.commands',icon:'✦',keywords:'bot commands install invite'},
+      {title:'BL:R player profile',desc:'Hunger recorded player stats',href:'/blr-profile/',icon:'★',keywords:'roblox hunger statistics'},
       {title:'Creator Studio',desc:'Clip, compress, patch and inspect videos',href:'https://n29.kz/creator/',icon:'🎬',keywords:'mp4 tiktok ffmpeg video'},
       {title:'InputDeck',desc:'macOS keyboard and trackpad overlay — latest preview download',href:'https://github.com/N29dev/InputDeck/releases/tag/continuous',icon:'⌨',keywords:'mac os apple silicon intel keyboard trackpad obs overlay swift inputdeck'},
       {title:'GitHub',desc:'Source code and public repositories',href:'https://github.com/N29dev',icon:'⌘',keywords:'developer code'},
